@@ -1,0 +1,29 @@
+<div class="card">
+  <form>
+    <fieldset>
+      <legend>Create CDN</legend>
+      <div class="container">
+        <input type="file" class="upload-button" onchange="console.log(event.target.files)">
+        <span class="icon-upload"></span>
+        <!-- <input type="file" class="file-upload" onchange="console.log(event.target.files)"> -->
+      </div>
+      <div class="created">
+        <p style="margin-bottom: 0px;">Created By:</p>
+        <input type="text" class="created-text" placeholder="Username">
+      </div>
+
+      <div class="multi-select">
+        <mat-form-field class="custom-width">
+          <mat-label>Send Approval</mat-label>
+          <mat-select [formControl]="toppings" multiple>
+            <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="buttons-container">
+        <button class="button-arounder">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
